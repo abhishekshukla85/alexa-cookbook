@@ -12,7 +12,7 @@ const ThingName      = 'waterPump';
 const SubscribeTopic = '$aws/things/' + ThingName + '/shadow/update/accepted';
 
 // 3. Click on the Interact menu item, to reveal the API Endpoint:
-const mqttEndpoint   = "a3npzlqqmmzqo.iot.us-east-1.amazonaws.com";
+const mqttEndpoint   = "a1d1htalkvkrx1.iot.us-east-1.amazonaws.com";
 
 
 // 4. Login to the AWS Cognito console
@@ -30,4 +30,4 @@ const mqttEndpoint   = "a3npzlqqmmzqo.iot.us-east-1.amazonaws.com";
 //
 
 // Cognito Identity Pool ID
-const IdentityPoolId = 'us-east-1:583dd84a-7792-49a6-9ce5-5624f80378e7';
+const IdentityPoolId = 'us-east-1:c93d4755-2088-4f33-a876-45c769b2707d';
