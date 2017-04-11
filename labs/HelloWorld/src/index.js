@@ -18,6 +18,33 @@ var handlers = {
 
     'MyIntent': function () {
         this.emit(':tell', 'Hello World from Alexa');
+    },
+
+    'WhatsUpIntent' : function() {
+        this.emit(':ask', 'what is up?');
+    },
+
+    'MyNameIsIntent': function() {
+        var myName = this.event.request.intent.slots.firstname.value;
+        this.attributes['name'] = myName;
+
+        this.emit(':ask', 'hello, ' + myName, 'try again');
+    },
+
+    'AMAZON.HelpIntent' : function() {
+        this.emit(':ask', 'How can I help you today?');
+    },
+
+    'AMAZON.CancelIntent' : function() {
+        this.emit(':tell', 'I will cancel, this was fun though!');
+    },
+
+    'AMAZON.StopIntent' : function() {
+        var myName = '';
+        if (this.attributes['name']) {
+            myName = this.attributes['name'];
+        }
+        this.emit(':tell', 'goodbye, ' + myName, 'try again');
     }
 };
 
